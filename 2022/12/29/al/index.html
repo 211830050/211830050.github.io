@@ -1,0 +1,594 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="摘    要：从目前来看，在社会迅猛发展的同时，科学技术水平也同时不断提升。于是，PLC制造技术不断优化升级。起初，PLC的作用只是集成控制技术。因为电力工业的不断发展，PLC技术在电力工业的应用范围扩张迅速。实际应用时，不管在技术还是应用效果上都与以前的电气控制系统相差很多。分析了PLC技术是如何运用到电气工程自动控制中的，并且还提了一些建议，为电气工程自动化控制发展给予一些有参考价值的方案。关">
+<meta property="og:type" content="article">
+<meta property="og:title" content="al">
+<meta property="og:url" content="http://example.com/2022/12/29/al/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="摘    要：从目前来看，在社会迅猛发展的同时，科学技术水平也同时不断提升。于是，PLC制造技术不断优化升级。起初，PLC的作用只是集成控制技术。因为电力工业的不断发展，PLC技术在电力工业的应用范围扩张迅速。实际应用时，不管在技术还是应用效果上都与以前的电气控制系统相差很多。分析了PLC技术是如何运用到电气工程自动控制中的，并且还提了一些建议，为电气工程自动化控制发展给予一些有参考价值的方案。关">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-12-29T06:10:04.000Z">
+<meta property="article:modified_time" content="2022-12-29T06:12:55.867Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>al - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="al"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-12-29 14:10" pubdate>
+          2022年12月29日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          40 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">al</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="摘-要："><a href="#摘-要：" class="headerlink" title="摘    要："></a>摘    要：</h2><p>从目前来看，在社会迅猛发展的同时，科学技术水平也同时不断提升。于是，PLC制造技术不断优化升级。起初，PLC的作用只是集成控制技术。因为电力工业的不断发展，PLC技术在电力工业的应用范围扩张迅速。实际应用时，不管在技术还是应用效果上都与以前的电气控制系统相差很多。分析了PLC技术是如何运用到电气工程自动控制中的，并且还提了一些建议，为电气工程自动化控制发展给予一些有参考价值的方案。<br>关键词：电气工程;自动化控制;PLC技术;<br>作者简介：郭维（1986—），男，工程师，目前在平顶山天安煤业九矿有限责任公司机电科工作;</p>
+<h2 id="0-引言"><a href="#0-引言" class="headerlink" title="0 引言"></a>0 引言</h2><p>PLC技术是计算机技术和目前机械控制技术的完美结合，能够进行闭环控制、控制开关以及控制顺序，最大限度的提升电气工程自动水平和自动控制水平。并且，可编程逻辑程序控制器技术一直在升级与优化，PLC技术在电气自动化以及控制器械运用中受到广泛认可。详细的讲，可编程程序控制器技术通常用在电气工程自控技术中，主要用于控制顺序、控制开关。目前，电气工程自控技术领域PLC技术水平不够，因此科研人员应当加大研发力度，开创新的应用策略，提升科研人员科研水平。在如今的信息化时代，PLC技术于电气工程自控中进行数字化应用，其抵抗外界干扰的能力逐渐增强。探讨PLC技术在电力工业中的应用，首先能够升级PLC技术，还能对电气工程自控技术可持续性发展以及自动控制技术的升级起到重要作用。</p>
+<h2 id="1-PLC技术的特点"><a href="#1-PLC技术的特点" class="headerlink" title="1 PLC技术的特点"></a>1 PLC技术的特点</h2><p>PLC技术非常灵敏潜适用性强。各种各样的软件都能利用这项技术执行众多的任务。在新任务出现的时候，普通的控制器一般控制不好这种任务。但是PLC技术能够适当修改程序执行新任务。而且，这项技术安全可靠性好，它可以自行诊断问题，马上检查出系统硬件或软件的问题，让这个系统安全平稳运行。最后，PLC技术适应能力特别强，在恶劣极端生产环境都能适用，而且它的适用广泛性特别强，这项技术使用起来非常方便、维修保护容易。</p>
+<h2 id="2-PLC核心技术"><a href="#2-PLC核心技术" class="headerlink" title="2 PLC核心技术"></a>2 PLC核心技术</h2><h3 id="2-1-控制技术"><a href="#2-1-控制技术" class="headerlink" title="2.1 控制技术"></a>2.1 控制技术</h3><p>存储数据的载体、中央处理器、设备接口、电源等设备构成了PLC技术的控制系统。使用者能参考需要自己添加外部辅助设施。这项技术的控制系统设备各司其职，互相配合。CPU主攻分析数据、接收处理、接收处理系统指令。存储数据的载体主攻存储程序信息及数据。I&#x2F;O接口与外设相连，一般用在收集外设发出的信息和系统指令。系统开启关闭由电源控制。这项技术在电控技术中的基本操作原理和计算机差不多。要先把电源插上，其次CPU自动执行网络诊断任务，然后处理网络信息数据。接着，操作人员对特定用户数据进行录入，这时显示界面管理输入输出信息。综上所述，PLC技术是硬件以及软件共同构成的，软件系统控制操作运行，硬件是软件系统运行的物质基础。</p>
+<h2 id="2-2-设计原则"><a href="#2-2-设计原则" class="headerlink" title="2.2 设计原则"></a>2.2 设计原则</h2><p>PLC技术在电工控制应用领域要达到控制对象的要求，并根据此执行控制工作，使控制工作更安全。这项技术用在电气自控领域使用要遵循经济效益为上的原则，确保控制系统平稳运行的基础上，最大限度降低成本，尽可能使利润空间上升。接着，相关科研人员应当加大研究力度，促使可编程逻辑程序控制器不断升级优化，效率大大提升。最后，这项技术使用在电气自控技术中要遵循质量原则，让控制系统的质量和安全得到保障。</p>
+<h2 id="3-PLC技术在电气自动化控制不同领域中的应用体现"><a href="#3-PLC技术在电气自动化控制不同领域中的应用体现" class="headerlink" title="3 PLC技术在电气自动化控制不同领域中的应用体现"></a>3 PLC技术在电气自动化控制不同领域中的应用体现</h2><p>由于电气工程自动化市场需求越来越大，PLC技术发展得越成熟。现在，在工业上用计算机控制系统在以前的应用慢慢由PLC技术代替，它可以让控制系统设计的更复杂。这项技术用于电气工程自控中，通常应用是处理数据、执行逻辑控制、模拟控制等等方面。这项技术一般用在电工自控的控制顺序以及控制开关。对逻辑部件进行控制能快速提升电工控制系统的运作效率，而且使用这项技术以前控制流程内人工操作错误。除此之外，在电工自控应用方面，PLC技术在按顺序控制操作有以下3种：控制现场、控制主要站级以远距离控制。由于这项技术不断发展，建立在PLC技术上的逻辑结构控制、仿真控制以及处理数据方面更有价值。而且，这项技术能够避免以前电控系统没有机械控制器分析功能、系统反应速度过慢等诸多劣势，快速提升电控系统的工作效率。</p>
+<h3 id="3-1-PLC技术的应用特征"><a href="#3-1-PLC技术的应用特征" class="headerlink" title="3.1 PLC技术的应用特征"></a>3.1 PLC技术的应用特征</h3><p>PLC技术有2个种类：模块结构和箱式结构。因为种类不一样，构成结构各不相同。模块结构PLC通常由中央处理器、系统电源、输入输出设备、存储介质构成。箱式结构通常由央处理器主板、显屏、存储介质、系统电源组成。二者的中央处理器性能不同，规格型号也不同。据实际情况，配置合适的中央处理器。模块结构和箱式结构都是总线型开放结构，输入输出设备可根据工程要求，按需增加。<br>PLC技术应用在电气工程自控设备中，一般具有以下几个性能优势：抗干扰性能好、微型，使用价值高、通用性强。此外，在日常维护时，这项技术可使维护工作更简便。它还能高效率的处理数据、模仿控制、逻辑结构控制等。</p>
+<h3 id="3-2-PLC技术在顺序控制中的高效应用"><a href="#3-2-PLC技术在顺序控制中的高效应用" class="headerlink" title="3.2 PLC技术在顺序控制中的高效应用"></a>3.2 PLC技术在顺序控制中的高效应用</h3><p>目前大部分企业用PLC技术时，通常把通用交货当做顺控器使用。譬如，这项技术用在电厂用来发电的锅炉系统中，可把它当成发电机开启、暂停保护过程中的顺控器，避免人为失误，使发电机发挥最大功效。在日常生产时，电工设备自控系统的质量如何决定了设备生产效率如何。所以，科研人员一定要对电工设备自控系统实行最科学最合理的设计方案，从而提高该系统运行效率。自动控制系统一般是用分开层次的结构，通常有然后控感测器以及现场感测器。<br>在电工自控过程中，顺控器通常是用PLC技术认作顺控器。譬如，发电工厂在清除灰尘时要用到这项技术实行顺控。这项技术顺控能力很大程度上影响电气工程自控的运行效率。而且评价一个供电厂综合能力通常参考效率指标。想要提升供电厂的工作效率，肯定要用到PLC技术实行顺控。这项技术用到顺控中去，能够大幅度降低电气工程控制系统的成本，让工作人员能够在室内进行程序检测控制，减少劳动力浪费，提升其运行效率。</p>
+<h3 id="3-3-PLC技术在开关量控制中的高效应用"><a href="#3-3-PLC技术在开关量控制中的高效应用" class="headerlink" title="3.3 PLC技术在开关量控制中的高效应用"></a>3.3 PLC技术在开关量控制中的高效应用</h3><p>和传统控制器做比较，目前的PLC能用做虚拟控制器使用，在人工自动化设备中得到充分运用，完全体现出PLC技术在电工自控应用领域的意义。包装袋收缩机在开关控制反射时长时，通常来讲，控制器的电路慢一些。因为包装袋收缩机在运行时常常出现短路情况，影响工作效率。这项技术的广泛应用能够避免这一问题。用在工程领域，电气设备的自动切换系统能够给PLC技术足够的发挥空间，提升价值。</p>
+<h3 id="3-4-PLC技术在工程自动化控制中的高效应用"><a href="#3-4-PLC技术在工程自动化控制中的高效应用" class="headerlink" title="3.4 PLC技术在工程自动化控制中的高效应用"></a>3.4 PLC技术在工程自动化控制中的高效应用</h3><p>如今，电气工程自控技术迅猛发展，PLC技术逐渐发展成熟。在这里，计算机技术的不断升级推动了PLC技术的高速发展，还加快生产技术的进程，让越来越多的电器自动控制设备被制造出来。预测在不久的将来，PLC技术肯定会推动电气设备朝多元化，多样化发展。为了让电工自控在实际使用时具有很多功能,从而满足不同的工作要求，因此，对PLC的程序内容实行更改升级。PLC在极端恶劣生产环境里或者是处于频率无线电的干扰时，它的操作系统在运行时发生错误。所以，科研人员要提升可编辑逻辑程序控制器技术的稳定性。根据实际情况增强抗干扰能力。此外，在升级优化PLC技术时，要把它和同种类的程序功能作对比，取其精华去其糟粕，让PLC技术更高效地应用在电工自控程序领域。</p>
+<h2 id="4-PLC技术在电气工程白动控制中的存在的问题"><a href="#4-PLC技术在电气工程白动控制中的存在的问题" class="headerlink" title="4 PLC技术在电气工程白动控制中的存在的问题"></a>4 PLC技术在电气工程白动控制中的存在的问题</h2><h3 id="4-1-缺乏高素质的专业型人才"><a href="#4-1-缺乏高素质的专业型人才" class="headerlink" title="4.1 缺乏高素质的专业型人才"></a>4.1 缺乏高素质的专业型人才</h3><p>目前，电气行业的人员方面尚有不足之处：(1)在目前的技术人员里，有多年操作经验的老员工缺乏对PLC以及相关时新技术的精通了解，无法跟上新技术应用的时代脚步。(2)刚入行的电工行业工作人员确实有足够的知识储备及工作能力，但是，缺少缺少实际工作经验。而且，中国复合型人才缺口比较大，培养制度不完善。</p>
+<h3 id="4-2-抗干扰能力欠缺"><a href="#4-2-抗干扰能力欠缺" class="headerlink" title="4.2 抗干扰能力欠缺"></a>4.2 抗干扰能力欠缺</h3><p>目前的PLC技术和以前的控制器技术相比，抗干扰性能大大提升。但如果要跟上时代发展的需要，是无法故步自封的，其抗干扰性能还有待进一步增强。由于电性磁性干扰作用，可能会使运行效率下降、出现失误情况，甚至直接造成程序损坏。所以，PLC的抗干扰性能也阻碍了它向电气自动化领域的进一步发展。PLC技术在应用层面上尚且缺乏科学系统的体系，因为PLC技术在逻辑运算、编辑程序、算术运算、控制功能方面选择颇多，在目前的应用方面科学系统的选择体系尚未建立。</p>
+<h2 id="5-加强PLC技术在电气工程白动控制中的应用策略"><a href="#5-加强PLC技术在电气工程白动控制中的应用策略" class="headerlink" title="5 加强PLC技术在电气工程白动控制中的应用策略"></a>5 加强PLC技术在电气工程白动控制中的应用策略</h2><h3 id="5-1-加强技术人员培训"><a href="#5-1-加强技术人员培训" class="headerlink" title="5.1 加强技术人员培训"></a>5.1 加强技术人员培训</h3><p>PLC技术应用在电气自控中，需要电气人员有更高的技术能力。足够的专业知识储备，精通操作技术。所以，中国要积极培养技术人员，提高他们的操作技能和综合素质。所以，企业要从自身做起，经常组织电气自动化控制培训活动，定期学习PLC技术专业知识以及操作技能，逐渐提升技术人员的综合专业能力，提高技术人员的操作能力。所以，中国需要重视职业技能学校的教育，增设PLC应用方面的专业。加大对复合型及通用型PLC技术人员的培养，使PLC技术人才在电气自控中满足市场需求。</p>
+<h3 id="5-2-加大PLC技术的研发力度"><a href="#5-2-加大PLC技术的研发力度" class="headerlink" title="5.2 加大PLC技术的研发力度"></a>5.2 加大PLC技术的研发力度</h3><p>因为科技在不断发展，就算PLC技术在目前是相对先进的，但它尚有无限的发展空间以及升级空间。所以，政府部门应当重视PLC技术的研发与升级，让PLC技术与电工自动技术完美结合，使其整体效能发挥到最佳水平。技术人员要全方位，多层次精通PLC技术的工作原理以及操作原则，从而进一步升级、改善PLC技术。而且，技术职工要把多年积累的实践经验加以分析研究并得出结论，对现存问题总结、分类整理，并解决问题。要做的不仅局限于以上几方面，学习、研究欧美最新的PLC技术，让我国的PLC技术可以与时代同步发展，促进电气自动化工业的发展。</p>
+<h3 id="5-3-完善PLC技术的应用标准"><a href="#5-3-完善PLC技术的应用标准" class="headerlink" title="5.3 完善PLC技术的应用标准"></a>5.3 完善PLC技术的应用标准</h3><p>各个行业有各个行业的PLC技术操作流程、使用内容以及使用规范。所以，电工企业需要主动建立PLC技术的使用规范及规则，让此技术在电工应用中有同一系统的标准，从而进一步确立PLC技术的使用规范，增强这项技术的运用效率。所以，电气工程企业要主动加入到PLC技术的研发中来，研究其操作流程、使用标准、测试标准、质量规范等一系列标准，保障这项技术使用规范性。</p>
+<h2 id="6-结语"><a href="#6-结语" class="headerlink" title="6 结语"></a>6 结语</h2><p>综上所述，PLC技术更适合于电工自动设备的应用领域。在使用时，方便进行具有复杂性的控制器设备的相关操作，从而精简控制器逻辑结构。此外，使用PLC技术能够快速增强系统平稳运行的能力，尽可能降低成本，改进升级PLC内部结构。PLC技术在科学控制HR、提高单位产量方面非常有效，能促进企业的经济社会效益的快速增长。与目前的网络及计算机技术结合起来，更是推动电气自控的PLC技术良性长远的发展。在电气自控过程中，这项技术的很多特点逐渐显露，不但能精简操作流程，还能减少系统运行时的工作负荷，大大提升电气工程自动化控制的效率。<br>参考文献<br>[1] 何梦倩.PLC技术在电气工程及其自动化控制中的应用分析[J].电子测试,2021(14):3.<br>[2] 经海翔,黄友锐,徐善永,等.基于数字孪生和概率神经网络的矿用通风机预测性故障诊断研究[J].工矿自动化,2021,47(11):53-60.<br>[3] 王康.PLC技术在电气工程及其自动化控制中的运用分析[J].信息周刊,2020(2):1.<br>[4] 田军,李明,姜瑾,等.选煤厂水泵闸板阀开度线激光辅助视觉监控[J].工矿自动化,2020,46(9):79-82.<br>[5] 辛永强.PLC技术在电气工程及其自动化控制[J].电子测试,2021(3):2.<br>[6] 吴畏,张海鹏.PLC技术在电气工程及其自动化控制中的应用探讨[J].新丝路:上旬, 2021(6):1.<br>[7] 李慧.副井井口自动化运输系统研究[J].工矿自动化,2021,47(6):124-127.</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>al</div>
+      <div>http://example.com/2022/12/29/al/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年12月29日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/09/09/foundation/" title="foundation">
+                        <span class="hidden-mobile">foundation</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
